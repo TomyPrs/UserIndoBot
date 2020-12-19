@@ -463,11 +463,10 @@ def check_not_bot(member, chat_id, message_id, context):
             pass
 
         try:
-            bot.edit_message_text(
-                "**This User Not Verify in 120sec**\nKicked Now!!!",
+            bot.edit_message_text(f"<b>{user.first_name}</b>did not verify, now kicked!!!",
                 chat_id=chat_id,
                 message_id=message_id,
-                parse_mode=ParseMode.MARKDOWN,
+                parse_mode=ParseMode.HTML,
             )
         except:
             pass
